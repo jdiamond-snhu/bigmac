@@ -3,7 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Set up Streamlit Page Configuration
-st.set_page_config(page_title="Big Mac Index Simulator", page_icon="🍔", layout="centered")
+st.set_page_config(page_title="Big Mac Index Simulator 2026", page_icon="🍔", layout="centered")
 
 # 1. Map user-facing countries to their currency tags and static exchange rates
 COUNTRY_MAP = {
@@ -79,6 +79,7 @@ def generate_chart(us_price, foreign_price_usd, target_country, foreign_currency
 
 # --- Streamlit UI App Layout ---
 st.title("🍔 Big Mac Index Simulator 2026")
+st.caption("by Jeff Diamond")
 st.write("Compare purchasing power globally using simulation matrices based on local cost variants.")
 
 # Sidebar Selection
