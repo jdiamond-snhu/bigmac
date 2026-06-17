@@ -96,7 +96,7 @@ us_price = st.sidebar.slider(
         "Set local U.S. Big Mac Price ($):",
         min_value=4.99,
         max_value=8.99,
-        value=5.89,
+        value=5.99,
         step=0.10,
         format="$%.2f",
         help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
