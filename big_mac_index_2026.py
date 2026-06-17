@@ -92,19 +92,15 @@ target_country = st.sidebar.selectbox(
 if target_country:
     country_info = COUNTRY_MAP[target_country]
     # Sidebar Configuration
-st.sidebar.header("Configuration")
-target_country = st.sidebar.selectbox("Select a country to analyze:", list(COUNTRY_MAP.keys()))
-
-# 🆕 Dynamic U.S. Base Price Slider
 us_price = st.sidebar.slider(
-    "Set local U.S. Big Mac Price ($):",
-    min_value=4.99,
-    max_value=8.99,
-    value=5.89, # This remains your default starting value
-    step=0.10,
-    format="$%.2f",
-    help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
-)
+        "Set local U.S. Big Mac Price ($):",
+        min_value=4.99,
+        max_value=8.99,
+        value=5.89,
+        step=0.10,
+        format="$%.2f",
+        help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
+    )
 
     currency = country_info["currency"]
     actual_exchange_rate = country_info["rate_per_usd"]
