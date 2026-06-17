@@ -100,7 +100,7 @@ us_price = st.sidebar.slider(
         value=5.89,
         step=0.10,
         format="$%.2f",
-        help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
+        help="Adjust to match the price of a Big Mac in your area. FYI: The national average is between $5.29 and $6.72"
     )
    
 currency = country_info["currency"]
