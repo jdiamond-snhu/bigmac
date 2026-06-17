@@ -112,10 +112,10 @@ variance_factors = {
     }
     
 variance = variance_factors.get(target_country, 1.0)
-    local_price = round((us_price * actual_exchange_rate) * variance, 2)
-    foreign_price_in_usd = local_price / actual_exchange_rate
-    implied_ppp = local_price / us_price
-    valuation_pct = round(((implied_ppp - actual_exchange_rate) / actual_exchange_rate) * 100, 2)
+local_price = round((us_price * actual_exchange_rate) * variance, 2)
+foreign_price_in_usd = local_price / actual_exchange_rate
+implied_ppp = local_price / us_price
+valuation_pct = round(((implied_ppp - actual_exchange_rate) / actual_exchange_rate) * 100, 2)
     
 # Visual Metrics Cards
     col1, col2, col3 = st.columns(3)
