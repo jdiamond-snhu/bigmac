@@ -95,17 +95,14 @@ if target_country:
  # Use whole integers for cents to prevent floating-point rounding skips
     us_price_cents = st.sidebar.slider(
         "Set local U.S. Big Mac Price ($):",
-        min_value=499, # 4.99 cents = $4.99
-        max_value=899, # 8.99 cents = $8.99
-        value=589,     # 5.89 cents = $5.89 default
-        step=10,       # Step exactly 10 cents at a time
+        min_value=4.99, # 4.99 cents = $4.99
+        max_value=8.99, # 8.99 cents = $8.99
+        value=5.89,     # 5.89 cents = $5.89 default
+        step=.10,       # Step exactly 10 cents at a time
         format="$%.2f", # Streamlit will still display it beautifully as a currency
         help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
     )
-    
-    # Convert back to regular dollars for your formulas and charts
-    us_price = us_price_cents / 100.0
-
+   
 currency = country_info["currency"]
 actual_exchange_rate = country_info["rate_per_usd"]
     
