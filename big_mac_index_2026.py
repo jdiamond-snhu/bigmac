@@ -118,10 +118,10 @@ implied_ppp = local_price / us_price
 valuation_pct = round(((implied_ppp - actual_exchange_rate) / actual_exchange_rate) * 100, 2)
     
 # Visual Metrics Cards
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Base US Price", f"${us_price:.2f}")
-    col2.metric(f"Local Price ({currency})", f"{local_price} {currency}")
-    col3.metric("USD Equivalent", f"${foreign_price_in_usd:.2f}")
+col1, col2, col3 = st.columns(3)
+col1.metric("Base US Price", f"${us_price:.2f}")
+col2.metric(f"Local Price ({currency})", f"{local_price} {currency}")
+col3.metric("USD Equivalent", f"${foreign_price_in_usd:.2f}")
     
 st.info(f"**Exchange Scale Matrix:** 1 USD = {actual_exchange_rate} {currency}")
     
