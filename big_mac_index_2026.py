@@ -105,7 +105,7 @@ us_price = st.sidebar.slider(
 currency = country_info["currency"]
 actual_exchange_rate = country_info["rate_per_usd"]
     
-    variance_factors = {
+variance_factors = {
         "Germany": 0.95, "United Kingdom": 0.90, "Japan": 0.55, "Australia": 0.98,
         "Spain": 0.88, "Italy": 0.85, "Poland": 0.62, "Mexico": 0.82,
         "Canada": 1.05, "Egypt": 0.40, "United Arab Emirates": 1.12, "Argentina": 0.35
