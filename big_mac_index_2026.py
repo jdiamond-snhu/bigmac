@@ -126,7 +126,7 @@ col3.metric("USD Equivalent", f"${foreign_price_in_usd:.2f}")
 st.info(f"**Exchange Scale Matrix:** 1 USD = {actual_exchange_rate} {currency}")
     
     # Generate and render chart directly on the web page
-    with st.spinner("Generating analysis chart..."):
+with st.spinner("Generating analysis chart..."):
         fig = generate_chart(us_price, foreign_price_in_usd, target_country, currency, valuation_pct)
         st.pyplot(fig)
 # --- Add this right at the very bottom of your script ---
