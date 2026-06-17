@@ -93,13 +93,13 @@ if target_country:
     country_info = COUNTRY_MAP[target_country]
     # Sidebar Configuration
  # Use whole integers for cents to prevent floating-point rounding skips
-    us_price_cents = st.sidebar.slider(
+us_price = st.sidebar.slider(
         "Set local U.S. Big Mac Price ($):",
-        min_value=4.99, # 4.99 cents = $4.99
-        max_value=8.99, # 8.99 cents = $8.99
-        value=5.89,     # 5.89 cents = $5.89 default
-        step=.10,       # Step exactly 10 cents at a time
-        format="$%.2f", # Streamlit will still display it beautifully as a currency
+        min_value=4.99,
+        max_value=8.99,
+        value=5.89,
+        step=0.10,
+        format="$%.2f",
         help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
     )
    
