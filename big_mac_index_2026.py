@@ -78,8 +78,9 @@ def generate_chart(us_price, foreign_price_usd, target_country, foreign_currency
     return fig
 
 # --- Streamlit UI App Layout ---
-st.title("🍔 Big Mac Index 2026")
-st.write("     Compare purchasing power globally using simulation matrices based on local cost variants.")
+st.title("🍔 Big Mac Index Simulator 2026")
+st.write("by Jeff Diamond")
+st.write("Compare purchasing power globally using simulation matrices based on local cost variants.")
 
 # Sidebar Selection
 st.sidebar.header("Configuration")
