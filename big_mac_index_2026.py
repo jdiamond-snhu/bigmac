@@ -102,7 +102,7 @@ us_price = st.sidebar.slider(
         help="Adjust this to see how changes in U.S. retail fast-food pricing automatically shift global purchasing power parity valuations."
     )
 
-    currency = country_info["currency"]
+currency = country_info["currency"]
     actual_exchange_rate = country_info["rate_per_usd"]
     
     variance_factors = {
