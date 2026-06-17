@@ -79,7 +79,6 @@ def generate_chart(us_price, foreign_price_usd, target_country, foreign_currency
 
 # --- Streamlit UI App Layout ---
 st.title("🍔 Big Mac Index Simulator 2026")
-st.write("by Jeff Diamond")
 st.write("Compare purchasing power globally using simulation matrices based on local cost variants.")
 
 # Sidebar Selection
@@ -120,3 +119,17 @@ if target_country:
     with st.spinner("Generating analysis chart..."):
         fig = generate_chart(us_price, foreign_price_in_usd, target_country, currency, valuation_pct)
         st.pyplot(fig)
+# --- Add this right at the very bottom of your script ---
+st.write("---") # Visual divider line
+
+with st.expander("🎓 Understanding the Economic Theory: Law of One Price vs. PPP"):
+    st.markdown("""
+    ### The Law of One Price
+    This foundational economic rule states that in an efficient market, identical goods must sell for the exact same price when expressed in a common currency. If a Big Mac costs more in one country than another, it signals that the currency may be mispriced (overvalued or undervalued).
+    
+    ### Why do prices vary in reality?
+    While the **Law of One Price** works perfectly in theory, real-world variations occur due to:
+    * **Non-tradable inputs:** Local wages, restaurant rent, and utility costs cannot be imported or exported.
+    * **Trade barriers:** Tariffs, shipping costs, and import regulations change regional pricing.
+    * **Local market positioning:** Profit margins and local competition influence corporate pricing strategy.
+    """)
