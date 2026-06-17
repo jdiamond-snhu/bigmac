@@ -100,7 +100,7 @@ us_price = st.sidebar.slider(
         value=5.89,
         step=0.10,
         format="$%.2f",
-        help="Adjust to match the price of a Big Mac in your area. FYI: The national average is between $5.29 and $6.72"
+        help="Adjust to match the price of a Big Mac in your area. FYI: The national average is between $5.29 to $6.72"
     )
    
 currency = country_info["currency"]
