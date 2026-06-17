@@ -83,7 +83,11 @@ st.write("     Compare purchasing power globally using simulation matrices based
 
 # Sidebar Selection
 st.sidebar.header("Configuration")
-target_country = st.sidebar.selectbox("Select a country to analyze:", list(COUNTRY_MAP.keys()))
+target_country = st.sidebar.selectbox(
+    "Select a country to analyze:", 
+    list(COUNTRY_MAP.keys()),
+    help="Purchasing Power Parity (PPP) states that exchange rates between currencies are in equilibrium when their purchasing power is the same in each of the two countries. This means a basket of goods (or a Big Mac!) should cost the same everywhere when converted to a common currency."
+)
 
 if target_country:
     country_info = COUNTRY_MAP[target_country]
