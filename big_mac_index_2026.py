@@ -125,7 +125,7 @@ col1.metric("Base US Price", f"${us_price:.2f}")
 col2.metric(f"Local Price ({currency})", f"{local_price} {currency}")
 col3.metric("USD Equivalent", f"${foreign_price_in_usd:.2f}")
     
-st.info(f"**Exchange Scale Matrix:** 1 USD = {actual_exchange_rate} {currency}")
+st.info(f"**Actual exchange rate:** 1 USD = {actual_exchange_rate} {currency}")
     
     # Generate and render chart directly on the web page
 with st.spinner("Generating analysis chart..."):
