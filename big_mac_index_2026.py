@@ -9,7 +9,7 @@ st.set_page_config(page_title="Big Mac Index Simulator 2026", page_icon="🍔", 
 COUNTRY_MAP = {
     "Germany": {"currency": "EUR", "rate_per_usd": 0.92},
     "United Kingdom": {"currency": "GBP", "rate_per_usd": 0.79},
-    "Japan": {"currency": "JPY", "rate_per_usd": 155.0},
+    "Japan": {"currency": "JPY", "rate_per_usd": 156.0},
     "Australia": {"currency": "AUD", "rate_per_usd": 1.51},
     "Spain": {"currency": "EUR", "rate_per_usd": 0.92},
     "Italy": {"currency": "EUR", "rate_per_usd": 0.92},
@@ -108,7 +108,7 @@ currency = country_info["currency"]
 actual_exchange_rate = country_info["rate_per_usd"]
     
 variance_factors = {
-        "Germany": 0.95, "United Kingdom": 0.90, "Japan": 0.55, "Australia": 0.98,
+        "Germany": 0.95, "United Kingdom": 0.90, "Japan": 0.56, "Australia": 0.98,
         "Spain": 0.88, "Italy": 0.85, "Poland": 0.62, "Mexico": 0.82,
         "Canada": 1.05, "Egypt": 0.40, "United Arab Emirates": 1.12, "Argentina": 0.35
     }
@@ -125,7 +125,7 @@ col1.metric("Base US Price", f"${us_price:.2f}")
 col2.metric(f"Local Price ({currency})", f"{local_price} {currency}")
 col3.metric("USD Equivalent", f"${foreign_price_in_usd:.2f}")
     
-st.info(f"**Actual exchange rate:** 1 USD = {actual_exchange_rate} {currency}")
+st.info(f"**Approximate exchange rate:** 1 USD = {actual_exchange_rate} {currency}")
     
     # Generate and render chart directly on the web page
 with st.spinner("Generating analysis chart..."):
