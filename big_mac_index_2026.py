@@ -51,7 +51,7 @@ def generate_chart(us_price, foreign_price_usd, target_country, foreign_currency
     if valuation < 0:
         ratio = us_price / foreign_price_usd
         ratio_str = f"{ratio:.1f}".rstrip('0').rstrip('.') if ratio % 1 != 0 else f"{int(ratio)}"
-        message = (f"🍔 Currency Power Tip!\n\nThe U.S. Dollar stretches\nmuch further here.\n\n"
+        message = (f"🍔 Currency Power Tip!\n\nThe U.S. Dollar stretches\nfurther here.\n\n"
                    f"One U.S. Big Mac gets you\nabout {ratio_str} Big Macs in {target_country}!\n\nPack your bags! ✈️")
         box_color, edge_color = '#e6f4ea', '#10b981'
     else:
